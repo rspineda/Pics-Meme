@@ -16,25 +16,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YPW-xE-ffu">
-                                <rect key="frame" x="87" y="384" width="240" height="128"/>
-                            </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5jL-Z4-aFK">
                                 <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem title="Item" id="wps-cg-uf6"/>
+                                    <barButtonItem title="Pick" id="wps-cg-uf6">
+                                        <connections>
+                                            <action selector="pickImage:" destination="BYZ-38-t0r" id="leh-yP-leT"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YPW-xE-ffu">
+                                <rect key="frame" x="87" y="384" width="240" height="128"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="5jL-Z4-aFK" firstAttribute="top" secondItem="YPW-xE-ffu" secondAttribute="bottom" constant="177" id="63R-Oo-0O9"/>
                             <constraint firstItem="5jL-Z4-aFK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="VAj-6W-i2d"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YPW-xE-ffu" secondAttribute="trailing" constant="87" id="aqr-Jp-ncq"/>
                             <constraint firstItem="5jL-Z4-aFK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dcv-hk-xkV"/>
+                            <constraint firstItem="5jL-Z4-aFK" firstAttribute="top" secondItem="YPW-xE-ffu" secondAttribute="bottom" constant="301" id="fUu-UB-PLs"/>
                             <constraint firstItem="5jL-Z4-aFK" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="uOy-V7-Z2M"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imagePickerView" destination="YPW-xE-ffu" id="zgg-fP-n75"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
