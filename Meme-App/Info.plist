@@ -2,12 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>Need to store Meme Photos</string>
-	<key>NSCameraUsageDescription</key>
-	<string>Need camera to take photos used to create Meme</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Need photo album to pick photos to be used on Memes</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>Meme-App</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -24,6 +22,12 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>Need camera to take pics used to create MeMes</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Need to store meme photos</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Need photo album to pick p[hotos to be used to create Memes</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
