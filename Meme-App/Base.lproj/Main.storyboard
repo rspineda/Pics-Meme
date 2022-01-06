@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dox-5p-Q5u" userLabel="TopToolbar">
-                                <rect key="frame" x="20" y="184" width="374" height="44"/>
+                                <rect key="frame" x="20" y="44" width="374" height="44"/>
                                 <items>
                                     <barButtonItem image="square.and.arrow.up" catalog="system" id="c5p-f7-dio" userLabel="shareButton">
                                         <connections>
@@ -39,11 +39,11 @@
                                 </items>
                             </toolbar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kyQ-X8-mgW" userLabel="BottomToolbar">
-                                <rect key="frame" x="20" y="678" width="374" height="44"/>
+                                <rect key="frame" x="20" y="813" width="374" height="49"/>
                                 <items>
                                     <barButtonItem style="plain" id="RVd-xT-VjB">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xLE-GU-fpO">
-                                            <rect key="frame" x="20" y="1" width="49" height="42"/>
+                                            <rect key="frame" x="20" y="6" width="49" height="42"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" image="photo" catalog="system"/>
                                             <connections>
@@ -54,7 +54,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="VCq-FF-8Zq"/>
                                     <barButtonItem style="plain" id="KjM-Pa-1hc">
                                         <button key="customView" opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="afJ-Pz-AMe">
-                                            <rect key="frame" x="305" y="1" width="49" height="42"/>
+                                            <rect key="frame" x="305" y="6" width="49" height="42"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" image="camera" catalog="system"/>
                                             <connections>
@@ -64,40 +64,40 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <imageView clipsSubviews="YES" contentMode="scaleToFill" semanticContentAttribute="playback" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Jq-0O-0cL">
-                                <rect key="frame" x="20" y="244" width="374" height="418"/>
-                                <color key="backgroundColor" systemColor="linkColor"/>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" semanticContentAttribute="playback" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Jq-0O-0cL">
+                                <rect key="frame" x="20" y="144" width="374" height="618"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OJJ-LZ-hvW">
-                                <rect key="frame" x="20" y="628" width="374" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OJJ-LZ-hvW">
+                                <rect key="frame" x="20" y="736.5" width="374" height="25.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bAP-Gt-4yF">
-                                <rect key="frame" x="20" y="244" width="374" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bAP-Gt-4yF">
+                                <rect key="frame" x="20" y="144" width="374" height="25.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBlueColor"/>
                         <constraints>
                             <constraint firstItem="bAP-Gt-4yF" firstAttribute="trailing" secondItem="dox-5p-Q5u" secondAttribute="trailing" id="1w7-Su-DHc"/>
                             <constraint firstItem="7Jq-0O-0cL" firstAttribute="leading" secondItem="dox-5p-Q5u" secondAttribute="leading" id="60u-Mu-B4c"/>
-                            <constraint firstItem="dox-5p-Q5u" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="140" id="86R-WB-bpj"/>
+                            <constraint firstItem="dox-5p-Q5u" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="86R-WB-bpj"/>
                             <constraint firstItem="kyQ-X8-mgW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="8LR-1J-S57" userLabel="BottomToolbar.leading = trailingMargin"/>
                             <constraint firstItem="OJJ-LZ-hvW" firstAttribute="leading" secondItem="kyQ-X8-mgW" secondAttribute="leading" id="AsU-xk-tGv"/>
-                            <constraint firstItem="7Jq-0O-0cL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="Hxe-QJ-CgH" userLabel="Image View.top = Safe Area.top + 160"/>
+                            <constraint firstItem="7Jq-0O-0cL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="Hxe-QJ-CgH" userLabel="Image View.top = Safe Area.top + 160"/>
                             <constraint firstItem="dox-5p-Q5u" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="IEH-uE-K9q"/>
-                            <constraint firstItem="kyQ-X8-mgW" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-140" id="Kk8-Hi-56L"/>
+                            <constraint firstItem="kyQ-X8-mgW" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Kk8-Hi-56L"/>
                             <constraint firstItem="kyQ-X8-mgW" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-20" id="MXt-5K-WVW" userLabel="BottomToolbar.trailing = trailingMargin"/>
                             <constraint firstItem="7Jq-0O-0cL" firstAttribute="trailing" secondItem="dox-5p-Q5u" secondAttribute="trailing" id="XbG-rR-s1Z"/>
                             <constraint firstItem="dox-5p-Q5u" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="cEn-OF-GRX"/>
                             <constraint firstItem="OJJ-LZ-hvW" firstAttribute="trailing" secondItem="kyQ-X8-mgW" secondAttribute="trailing" id="isc-0Q-TP3"/>
-                            <constraint firstItem="bAP-Gt-4yF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="jN8-6z-dNh" userLabel="Top Text Field.top = Safe Area.top + 160"/>
+                            <constraint firstItem="bAP-Gt-4yF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="jN8-6z-dNh" userLabel="Top Text Field.top = Safe Area.top + 160"/>
                             <constraint firstItem="bAP-Gt-4yF" firstAttribute="leading" secondItem="dox-5p-Q5u" secondAttribute="leading" id="k5E-Wu-yTg"/>
-                            <constraint firstItem="OJJ-LZ-hvW" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-200" id="niv-Fp-HrQ" userLabel="Bottom Text Field.bottom = Safe Area.bottom - 160"/>
-                            <constraint firstItem="7Jq-0O-0cL" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-200" id="xIy-db-QYp" userLabel="Image View.bottom = Safe Area.bottom - 160"/>
+                            <constraint firstItem="OJJ-LZ-hvW" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-100" id="niv-Fp-HrQ" userLabel="Bottom Text Field.bottom = Safe Area.bottom - 160"/>
+                            <constraint firstItem="7Jq-0O-0cL" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-100" id="xIy-db-QYp" userLabel="Image View.bottom = Safe Area.bottom - 160"/>
                         </constraints>
                     </view>
                     <connections>
@@ -119,7 +119,7 @@
         <image name="camera" catalog="system" width="128" height="94"/>
         <image name="photo" catalog="system" width="128" height="93"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
-        <systemColor name="linkColor">
+        <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
