@@ -41,19 +41,24 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kyQ-X8-mgW" userLabel="BottomToolbar">
                                 <rect key="frame" x="20" y="678" width="374" height="44"/>
                                 <items>
-                                    <barButtonItem image="photo" catalog="system" id="FDf-oe-QB9">
-                                        <connections>
-                                            <action selector="pickPhotoFromAlbum:" destination="BYZ-38-t0r" id="ftD-eC-Cf2"/>
-                                        </connections>
+                                    <barButtonItem style="plain" id="RVd-xT-VjB">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xLE-GU-fpO">
+                                            <rect key="frame" x="20" y="1" width="49" height="42"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="photo" catalog="system"/>
+                                            <connections>
+                                                <action selector="pickImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xhH-XU-yhe"/>
+                                            </connections>
+                                        </button>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="VCq-FF-8Zq"/>
                                     <barButtonItem style="plain" id="KjM-Pa-1hc">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="afJ-Pz-AMe">
+                                        <button key="customView" opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="afJ-Pz-AMe">
                                             <rect key="frame" x="305" y="1" width="49" height="42"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" image="camera" catalog="system"/>
                                             <connections>
-                                                <action selector="pickPhotoFromCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Djf-nq-sR2"/>
+                                                <action selector="pickImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uAE-dm-qR4"/>
                                             </connections>
                                         </button>
                                     </barButtonItem>

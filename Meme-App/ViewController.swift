@@ -18,6 +18,7 @@ class ViewController: UIViewController,  UITextFieldDelegate, UIImagePickerContr
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var cameraButton: UIButton!
+    @IBOutlet weak var albumButton: UIBarButtonItem!
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var bottomTextField: UITextField!
     
@@ -27,13 +28,13 @@ class ViewController: UIViewController,  UITextFieldDelegate, UIImagePickerContr
     @IBOutlet weak var shareButton: UIBarButtonItem!
     
     let memeTextAttributes: [NSAttributedString.Key: Any] = [
-        NSAttributedString.Key.strokeColor: UIColor.white,
-        NSAttributedString.Key.foregroundColor: UIColor.black,
+        NSAttributedString.Key.strokeColor: UIColor.black,
+        NSAttributedString.Key.foregroundColor: UIColor.white,
         NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
-        NSAttributedString.Key.strokeWidth:  4.0
+        NSAttributedString.Key.strokeWidth:  -3.5
     ]
     
-    // setting up delegates and centering and formatting text
+    // Delegates, centering and formatting text
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -47,7 +48,7 @@ class ViewController: UIViewController,  UITextFieldDelegate, UIImagePickerContr
         
     }
     
-    // Disable camera button if device doesn't have camera and when the keyboard appears
+    // Disable camera button if device doesn't have camera and keyboard appears
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         subscribeToKeyboardNotifications()
@@ -61,18 +62,16 @@ class ViewController: UIViewController,  UITextFieldDelegate, UIImagePickerContr
         super.viewWillDisappear(animated)
         unsubscribeFromKeyboardNotifications()
     }
-    // Action to choose photo for memes from Album
-    @IBAction func pickPhotoFromAlbum(_ sender: Any) {
+    
+    // Choose photo from album or camera
+    @IBAction func pickImage(_ sender: UIButton) {
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
-        imagePicker.sourceType = .photoLibrary
-        present(imagePicker, animated: true, completion: nil)
-    }
-    // Action to choose photo for memes from Camera
-    @IBAction func pickPhotoFromCamera(_ sender: Any) {
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.sourceType = .camera
+        if sender.tag == 0 {
+            imagePicker.sourceType = .photoLibrary
+        }else {
+            imagePicker.sourceType = .camera
+        }
         present(imagePicker, animated: true, completion: nil)
     }
     
@@ -107,7 +106,7 @@ class ViewController: UIViewController,  UITextFieldDelegate, UIImagePickerContr
     
     // Shifting the view up when keyboard is displayed
     @objc func keyboardWillShow(_ notification: Notification){
-        view.frame.origin.y = view.frame.origin.y - (getKeyboardHeight(notification) - 160)
+        view.frame.origin.y = -getKeyboardHeight(notification)
     }
     
     // subscribing to keyboard show notifications
