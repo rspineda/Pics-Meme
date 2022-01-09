@@ -80,7 +80,7 @@
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                        <color key="backgroundColor" red="0.14117647058823529" green="0.28627450980392155" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="bAP-Gt-4yF" firstAttribute="trailing" secondItem="dox-5p-Q5u" secondAttribute="trailing" id="1w7-Su-DHc"/>
                             <constraint firstItem="7Jq-0O-0cL" firstAttribute="leading" secondItem="dox-5p-Q5u" secondAttribute="leading" id="60u-Mu-B4c"/>
