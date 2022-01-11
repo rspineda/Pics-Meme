@@ -28,22 +28,18 @@ class ViewController: UIViewController,  UITextFieldDelegate, UIImagePickerContr
     @IBOutlet weak var shareButton: UIBarButtonItem!
     
     let memeTextAttributes: [NSAttributedString.Key: Any] = [
-        NSAttributedString.Key.strokeColor: UIColor.black,
-        NSAttributedString.Key.foregroundColor: UIColor.white,
-        NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
-        NSAttributedString.Key.strokeWidth:  -3.5
+        .strokeColor: UIColor.black,
+        .foregroundColor: UIColor.white,
+        .font: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
+        .strokeWidth:  -3.5
     ]
     
     // Delegates, centering and formatting text
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.topTextField.delegate = self
-        self.bottomTextField.delegate = self
-        self.topTextField.defaultTextAttributes = memeTextAttributes
-        self.bottomTextField.defaultTextAttributes = memeTextAttributes        
-        self.topTextField.textAlignment = .center
-        self.bottomTextField.textAlignment = .center
+        setupTextField(topTextField, text: "TOP")
+        setupTextField(bottomTextField, text: "BOTTOM")
         self.shareButton.isEnabled = false
         
     }
@@ -61,6 +57,12 @@ class ViewController: UIViewController,  UITextFieldDelegate, UIImagePickerContr
 
         super.viewWillDisappear(animated)
         unsubscribeFromKeyboardNotifications()
+    }
+    
+    func setupTextField(_ textField: UITextField, text: String){
+        textField.delegate = self
+        textField.defaultTextAttributes = memeTextAttributes
+        textField.textAlignment = .center
     }
     
     // Choose photo from album or camera
